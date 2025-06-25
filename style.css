@@ -1,0 +1,173 @@
+
+:root {
+  --bg: #00c6ff;
+  --text: #222;
+  --card: rgba(255, 255, 255, 0.2);
+  --card-border: rgba(255, 255, 255, 0.4);
+  --primary: #3498db;
+  --success: #2ecc71;
+  --danger: #e74c3c;
+  --button-bg: rgba(255, 255, 255, 0.4);
+  --input-bg: rgba(255, 255, 255, 0.5);
+}
+
+body.dark {
+  --bg: #0f2027;
+  --text: #ffffff;
+  --card: rgba(0, 0, 0, 0.4);
+  --card-border: rgba(255, 255, 255, 0.2);
+  --button-bg: rgba(255, 255, 255, 0.15);
+  --input-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(-45deg, #00c6ff, #0072ff, #00c6ff, #0072ff);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: var(--text);
+  transition: background 0.5s ease-in-out, color 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+body.dark {
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #000000);
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(12px);
+  background: var(--card);
+  border-bottom: 2px solid var(--card-border);
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text);
+}
+
+#toggleTheme {
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: var(--button-bg);
+  color: var(--text);
+  border: none;
+  cursor: pointer;
+}
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  background: var(--card);
+  border: 2px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  padding: 30px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 450px;
+  max-width: 90%;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 10px;
+  background: var(--input-bg);
+  color: var(--text);
+  width: 120px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: var(--button-bg);
+  color: var(--text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+#restartBtn {
+  margin-top: 20px;
+  background: var(--success);
+  color: white;
+}
+
+#restartBtn:hover {
+  background: #27ae60;
+}
+
+.result {
+  margin-top: 15px;
+  font-weight: 600;
+}
+#confetti {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  pointer-events: none;
+  z-index: 999;
+  text-align: center;
+  color: gold;
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% { transform: translateX(-50%) scale(0); opacity: 0; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+footer {
+  text-align: center;
+  padding: 16px;
+  background: var(--card);
+  border-top: 2px solid var(--card-border);
+  backdrop-filter: blur(12px);
+  color: var(--text);
+}
+
+.social-links {
+  margin-top: 8px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  color: var(--text);
+  font-size: 24px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}

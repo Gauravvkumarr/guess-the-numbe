@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="style.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <header>
+    <h1> Guess the Number 🎯</h1>
+    <button id="toggleTheme" title="Toggle Theme">🌙</button>
+  </header>
+  <div id="confetti"></div>
+  <main class="main">
+    <div class="container">
+      <h2><strong>Ready to Guess?</strong></h2>
+      <p>I'm thinking of a number between <strong>1</strong> and <strong>100</strong></p>
+
+      <input type="number" id="guessField" placeholder="Enter your guess" />
+      <button id="guessSubmit">Guess</button>
+
+      <p class="result" id="resultText"></p>
+      <p>Previous guesses: <span id="prevGuesses">None</span></p>
+      <p>Attempts: <span id="attempts">0</span></p>
+      <p>⏱️ Time: <span id="timer">0s</span></p>
+
+      <button id="restartBtn">🔄 Restart Game</button>
+    </div>
+  </main>
+  <footer>
+    <p>Created by Gaurav Kumar</p>
+    <div class="social-links">
+      <a href="https://github.com/Gauravvkumarr" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/gaurav-kumar-207239246/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+  </footer>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
